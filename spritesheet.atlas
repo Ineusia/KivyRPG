@@ -1,0 +1,11 @@
+{
+    "sheet.png": {
+        "frame1": [0,704,31,31],
+        "frame2": [32,704,31,31],
+        "frame3": [64,704,31,31],
+        "frame4": [96, 704, 31, 31]
+    },
+    "professor_walk_cycle_no_hat.png": {
+        "walkdown": [0, 64, 64, 64]
+    }
+}
