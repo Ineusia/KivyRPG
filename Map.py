@@ -30,5 +30,5 @@ class Map(Widget):
                 with self.canvas:
                     Rectangle(source='atlas://spritesheet/frame' + self.tiles[y][x], size=(window_width / 15, window_height / 10), pos=(x * window_width / 15, y * window_height / 10))
 
-        self.add_widget(Label(text=str(window_width)))
+        #self.add_widget(Label(text=str(window_width)))
 
