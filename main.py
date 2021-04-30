@@ -1,5 +1,4 @@
 from kivy.app import App
-from kivy.graphics.context_instructions import Color
 from kivy.properties import NumericProperty
 from kivy.uix.widget import Widget
 from kivy.uix.label import Label
