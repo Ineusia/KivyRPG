@@ -7,6 +7,10 @@ class Player(Widget):
         super().__init__(**kwargs)
         self.winWidth, self.winHeight = Window.size
 
+        self.spriteSource = "atlas://spritesheet/"
+
+        self.spriteId = "down"
+
         self.redraw = True
 
         self.x = x
@@ -31,19 +35,20 @@ class Player(Widget):
         self.canvas.clear()
 
         with self.canvas:
-            Rectangle(source='atlas://spritesheet/walkdown', size=(windowWidth/15, windowHeight/10),
+            Rectangle(source=self.spriteSource + self.spriteId, size=(windowWidth/15, windowHeight/10),
                       pos=(self.x * (windowWidth / 15), self.y * (windowHeight / 10)))
 
     def move(self, direction):
         self.redraw = True
         if direction == "w":
             self.y = self.y + 1
+            self.spriteId = "up"
         if direction == "a":
             self.x = self.x - 1
+            self.spriteId = "left"
         if direction == "s":
             self.y = self.y - 1
+            self.spriteId = "down"
         if direction == "d":
             self.x = self.x + 1
-
-    def sprite(self):
-        pass
+            self.spriteId = "right"
